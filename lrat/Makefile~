@@ -1,0 +1,13 @@
+CC=gcc
+CFLAGS=-O2 -g
+
+all: lrat-check
+
+install: all
+
+lrat-check: lrat-check.c
+	$(CC) $(CFLAGS) lrat-check.c -o lrat-check
+
+clean:
+	rm -f lrat-check
+
