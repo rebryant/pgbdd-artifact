@@ -1,5 +1,5 @@
 INTERP = python3
-N = 10
+N = 010
 VLEVEL = 1
 
 GENERATOR = $(INTERP) ../chess.py
