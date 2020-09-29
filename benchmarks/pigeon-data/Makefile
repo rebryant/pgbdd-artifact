@@ -2,7 +2,7 @@ INTERP = python3
 N = 010
 VLEVEL = 1
 
-GENERATOR = $(INTERP) ../chess.py
+GENERATOR = $(INTERP) ../pigeon-tseitin.py
 SOLVER = $(INTERP) ../../solver/pgbdd.py
 CHECKER = ../../lrat/lrat-check
 GRABBER = ../grab_data.py
