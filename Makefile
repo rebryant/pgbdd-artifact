@@ -10,6 +10,13 @@ install:
 test: install
 	cd benchmarks; make test INTERP=$(INTERP)
 
+chess:	
+	cd benchmarks ; make chess INTERP=$(INTERP)
+
+pigeon:	
+	cd benchmarks ; make pigeon INTERP=$(INTERP)
+
+
 regress: install
 	cd benchmarks; make regress INTERP=$(INTERP)
 

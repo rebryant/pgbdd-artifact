@@ -7,6 +7,13 @@ test:
 	cd chess-data ; make test INTERP=$(INTERP)
 	cd pigeon-data ; make test  INTERP=$(INTERP)
 
+chess:	
+	cd chess-data ; make chess INTERP=$(INTERP)
+
+pigeon:	
+	cd pigeon-data ; make pigeon INTERP=$(INTERP)
+
+
 regress:
 	cd chess-data ; make regress INTERP=$(INTERP)
 	cd pigeon-data ; make regress INTERP=$(INTERP)

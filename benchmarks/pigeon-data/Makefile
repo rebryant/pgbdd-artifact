@@ -1,10 +1,12 @@
 INTERP = python3
 N = 10
-VLEVEL = 2
+VLEVEL = 1
 
 GENERATOR = $(INTERP) ../chess.py
 SOLVER = $(INTERP) ../../solver/pgbdd.py
 CHECKER = ../../lrat/lrat-check
+GRABBER = ../grab_data.py
+DDEST = ../../pigeon-results.txt
 
 test: c
 
@@ -36,6 +38,11 @@ pigeon-tseitin-$(N)-linear.data:
 	$(CHECKER) pigeon-tseitin-$(N).cnf pigeon-tseitin-$(N).lrat | tee -a pigeon-tseitin-$(N)-linear.data
 	rm -f pigeon-tseitin-$(N).lrat
 
+pigeon:
+	./gen-column.sh
+	echo "Summary of results.  Also stored in $(DDEST)"
+	$(GRABBER) pigeon-tseitin-*-column.data | tee $(DDEST)
+
 regress:
 	./regress.sh
 
@@ -43,4 +50,4 @@ clean:
 	rm -f *~
 
 superclean: clean
-	rm -f *.cnf *.lrat *.lratb *.data *.order *.schedule
+	rm -f *.cnf *.lrat *.lratb *.data *.order *.schedule $(DDEST)

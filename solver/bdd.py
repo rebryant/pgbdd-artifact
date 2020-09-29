@@ -787,7 +787,7 @@ class Manager:
             self.writer.write("Total cached results requiring proofs: %d\n" % self.cacheJustifyAdded)
             self.writer.write("Total cache entries removed: %d\n" % self.cacheRemoved)
             self.writer.write("Total GCs performed: %d\n" % self.gcCount)
-        if self.verbLevel >= 1:
+        if self.verbLevel >= 2:
             self.writer.write("Results from And Operations:\n")
             self.andResolver.summarize()
             self.writer.write("Results from Implication Testing Operations:\n")

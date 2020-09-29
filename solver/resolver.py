@@ -363,7 +363,7 @@ class VResolver:
 
 
     def summarize(self):
-        if self.prover.verbLevel >= 1 and self.runCount > 0:
+        if self.prover.verbLevel >= 2 and self.runCount > 0:
             antecedentAvg = float(self.antecedentCount) / float(self.runCount)
             clauseAvg = float(self.clauseCount) / float(self.runCount)
             tryAvg = float(self.tryCount) / float(self.runCount)

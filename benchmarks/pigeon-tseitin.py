@@ -158,9 +158,9 @@ class Configuration:
             if p > 0:
                 self.scheduleWriter.doComment("Combine pigeon %d with predecessors" % p)
                 self.scheduleWriter.doAnd(1)
-                self.scheduleWriter.doInformation("Before quantification for pigeon %d" % p)
+#                self.scheduleWriter.doInformation("Before quantification for pigeon %d" % p)
                 self.scheduleWriter.doQuantify(pvars)
-                self.scheduleWriter.doInformation("After quantification for pigeon %d" % p)
+#                self.scheduleWriter.doInformation("After quantification for pigeon %d" % p)
 
     def build(self):
         self.generateVariables()

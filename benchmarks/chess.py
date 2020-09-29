@@ -37,37 +37,6 @@ def usage(name):
     print("  -n N     Specify size of board")
 
 
-def popcount(x):
-    count = 0
-    while x != 0:
-        count += x & 1
-        x = x >> 1
-    return count
-
-def bitList(x, count):
-    ls = []
-    for i in range(count):
-        b = (x>>i) & 1
-        ls.append(b)
-    return ls
-
-# Less efficient version
-def exactlyOneOld(vars):
-    n = len(vars)
-    if n == 0:
-        return None # Can't do it
-    # Generate integer values for not = 1
-    bits = []
-    for x in range(1<<n):
-        if popcount(x) != 1:
-            bits.append(bitList(x, n))
-    # Build clauses, inverting bits
-    clauses = []
-    for blist in bits:
-        clause = [vars[i] if blist[i] == 0 else -vars[i] for i in range(n)]
-        clauses.append(clause)
-    return clauses
-
 def exactlyOne(vars):
     n = len(vars)
     if n == 0:
@@ -210,13 +179,9 @@ class Board:
                 self.scheduleWriter.doComment("Combine column %d with predecessors" % c)
                 self.scheduleWriter.doAnd(1)
                 if len(left) > 0:
-#                    if c == self.n//2:
-#                        self.scheduleWriter.doInformation("Before quantification for column %d" % c)
                     self.scheduleWriter.doQuantify(left)
-#                    if c == self.n//2:
-#                        self.scheduleWriter.doInformation("After quantification for column %d" % c)
-            self.scheduleWriter.doInformation("After quantification for column %d" % c)
-
+                    if c == self.n//2:
+                        self.scheduleWriter.doInformation("After quantification for column %d" % c)
 
 
     # Construct constraints for specified number of columns.  
