@@ -30,7 +30,7 @@ chess:
 pigeon:
 
   Generate and test versions of the pigeonhole problem with N holes
-  and N+1 pigeons up to N=50.  This demonstrates the power of the
+  and N+1 pigeons up to N=40.  This demonstrates the power of the
   BDD-based approach plus a novel method of organizing the sequencing
   of conjunction and existential quantification operations inspired by
   symbolic model checking.
