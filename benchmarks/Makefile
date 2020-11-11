@@ -25,6 +25,7 @@ clean:
 	cd chess-data; make clean
 	cd pigeon-data; make clean
 	rm -f *~ *.pyc
+	rm -rf __pycache__
 
 superclean: clean
 	cd chess-data; make superclean

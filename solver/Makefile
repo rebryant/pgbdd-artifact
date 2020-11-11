@@ -4,4 +4,5 @@ install:
 	echo "No installation required"
 
 clean:
-	rm -rf *~ *.pyc
+	rm -f *~ *.pyc
+	rm -rf __pycache__
