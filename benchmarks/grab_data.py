@@ -93,7 +93,7 @@ def usage(name):
     sys.exit(0)
 
 def showList(ls):
-    print "\t".join(ls)
+    print("\t".join(ls))
 
 def run(name, args):
     if len(args) < 1:
