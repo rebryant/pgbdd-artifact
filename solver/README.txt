@@ -25,3 +25,24 @@ Files:
 	stream.py    Manages I/O
 	qbdd.py	     The solver
 
+Format for the schedule file:
+
+The schedule file is a text file with each line providing a command to
+a simple, stack-based interpreter.  The commands are as follows:
+
+# ...
+        Comment line
+
+c C_1 C_2 ... C_k
+        Retrieve specified clauses and push onto stack
+
+a K
+        Pop K+1 elements.  Compute their conjunction and push result onto stack
+
+q V_1 V_2 ... V_k
+        Pop top element of stack.  Existentially quantify it by
+        specified variables and push result onto stack
+
+i Docstring
+        Print out BDD information about top element on stack
+

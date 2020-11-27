@@ -5,7 +5,7 @@ A checker for this format is included.
 The program also generates and tests two benchmark problems: the
 mutilated chessboard problem and the pigeonhole problem.
 
-System Requirements (Tested with TACAS virtual environment)
+1. System Requirements (Tested with TACAS virtual environment)
 
        * Python interpreter.  By default, the program runs python3.
          You can change by editing the "INTERP" definition in the
@@ -14,7 +14,27 @@ System Requirements (Tested with TACAS virtual environment)
        * C compiler.  The LRAT checker is written in C.  Just about
          any compiler should work.  The default is gcc.
 
-Makefile options:
+2. Installation and Running Demonstration
+
+All code and benchmark data can be downloaded in two different ways:
+
+A. Using GitHub
+
+   git clone https://github.com/rebryant/pgbdd-artifact
+
+B. Getting the Zip File
+
+   wget http://www.cs.cmu.edu/~bryant/download/pgbdd-artifact.zip
+   unzip pgbdd-artifact.zip
+
+Once downloaded, the two demonstrations can be run as:
+
+   cd pgbdd-artifact
+   make chess
+   make pigeon
+
+
+3. Makefile options:
 
 chess:
 
@@ -79,3 +99,8 @@ superclean:
 
   Delete all generated files, including the benchmark data
 
+4. Using PGBDD as a standalone SAT solver
+
+The PGBDD SAT solver is available as the program pgbdd.py in the
+directory pgbdd-artifact/solver. Its use is documented in the file
+pgbdd-artifact/solver/README.txt.

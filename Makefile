@@ -10,10 +10,10 @@ install:
 test: install
 	cd benchmarks; make test INTERP=$(INTERP)
 
-chess:	
+chess: install
 	cd benchmarks ; make chess INTERP=$(INTERP)
 
-pigeon:	
+pigeon:	install
 	cd benchmarks ; make pigeon INTERP=$(INTERP)
 
 
