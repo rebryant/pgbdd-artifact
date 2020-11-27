@@ -5,7 +5,7 @@ VLEVEL = 1
 GENERATOR = $(INTERP) ../pigeon-tseitin.py
 SOLVER = $(INTERP) ../../solver/pgbdd.py
 CHECKER = ../../lrat/lrat-check
-GRABBER = ../grab_data.py
+GRABBER = $(INTERP) ../grab_data.py
 DDEST = ../../pigeon-results.txt
 
 test: c
