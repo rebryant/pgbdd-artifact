@@ -33,6 +33,12 @@ Once downloaded, the two demonstrations can be run as:
    make chess
    make pigeon
 
+For both sets of benchmarks, a lot of stuff gets printed, but the
+final summary information is saved in files chess-results.txt and
+pigeon-results.txt in the top-level directory.  See the included file
+"artifact-documentation.pdf" for more information about the benchmarks
+and how to interpret the results.
+
 
 3. Makefile options:
 
@@ -49,7 +55,9 @@ chess:
   checking.
 
   A lot of stuff gets printed, but the final summary information is
-  saved in a file "chess-results.txt" in the top-level directory.
+  saved in a file "chess-results.txt" in the top-level directory.  See
+  the included file "artifact-documentation.pdf" for more information
+  about the benchmarks and how to interpret the results.
 
 pigeon:
 
@@ -57,10 +65,12 @@ pigeon:
   and N+1 pigeons up to N=40.  This demonstrates the power of the
   BDD-based approach plus a novel method of organizing the sequencing
   of conjunction and existential quantification operations inspired by
-  symbolic model checking.
+  symbolic model checking.  
 
   A lot of stuff gets printed, but the final summary information is
   saved in a file "pigeon-results.txt" in the top-level directory.
+  See the included file "artifact-documentation.pdf" for more
+  information about the benchmarks and how to interpret the results.
 
 test:
 
@@ -108,3 +118,4 @@ superclean:
 The PGBDD SAT solver is available as the program pgbdd.py in the
 directory pgbdd-artifact/solver. Its use is documented in the file
 pgbdd-artifact/solver/README.txt.
+
