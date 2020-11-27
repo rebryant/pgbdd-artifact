@@ -36,6 +36,10 @@ Once downloaded, the two demonstrations can be run as:
 
 3. Makefile options:
 
+install:
+
+  Compiles the LRAT checker.  No other installation steps are required.
+
 chess:
 
   Generate and test versions of the N x N mutilated chessboard up to
